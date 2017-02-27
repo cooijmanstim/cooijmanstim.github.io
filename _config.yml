@@ -17,11 +17,10 @@ url:                 "https://cooijmanstim.github.io"
 github:              "https://www.github.com/cooijmanstim"
 timezone:            UTC
 
-exclude: ["README.md", "OWNERS", "update_blog.sh"]
-
 # Custom vars
 version:             0.0.1
 
 # Build settings
 markdown: kramdown
 
+theme: jekyll-theme-midnight
