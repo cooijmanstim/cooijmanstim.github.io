@@ -40,3 +40,5 @@ Here are some animations of the Gibbs process arriving at a solution:
 <img src="/assets/images/sample_2017-04-02/gibbs_19.gif">
 
 I seem to need to run the Gibbs chain for longer or to fiddle with the annealing schedule. Also it seems to be fond of extreme values (black, hard red/green/blue) which doesn't really make sense as I've discretized the RGB values into 256 categories each; the endpoints are not special.
+
+The code is at https://github.com/cooijmanstim/my3yearold.
