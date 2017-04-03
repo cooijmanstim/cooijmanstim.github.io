@@ -4,7 +4,7 @@ title: Caption-conditional image inpainting using orderless NADE
 date:   2017-04-02
 ---
 
-This is the first post of a few on my approach to Aaron Courville's Deep Learning class project of winter 2017 at UdeM. The goals is to do image inpainting conditioned on captions. See https://ift6266h17.wordpress.com/project-description/ for details.
+This is the first post of a few on my approach to Aaron Courville's Deep Learning class project of winter 2017 at UdeM. The goal is to do image inpainting conditioned on captions. See https://ift6266h17.wordpress.com/project-description/ for details.
 
 After a first stab with GANs I decided it'd be more interesting to try [Orderless NADE](https://arxiv.org/abs/1310.1757), an approach that me and mine also used for generative modeling of music (see [this rejected ICLR submission](https://openreview.net/forum?id=r1Usiwcex&noteId=r1Usiwcex)).
 
