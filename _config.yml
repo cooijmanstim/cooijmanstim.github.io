@@ -10,14 +10,14 @@ paginate_path: "page:num"
 # Setup
 title:               Simplifying Assumptions
 description:         "the only winning move is not to play"
-base-url:             "base-url"
-baseurl:             ""
-url:                 "https://cooijmanstim.github.io"
+#base-url:             "base-url"
+#baseurl:             ""
+#url:                 "https://cooijmanstim.github.io"
 #github:              "https://github.com/cooijmanstim/cooijmanstim.github.io"
-timezone:            UTC
+#timezone:            UTC
 
 # Custom vars
-version:             0.0.1
+#version:             0.0.1
 
 # Build settings
 markdown: kramdown
