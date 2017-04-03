@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Caption-conditional image inpainting using orderless NADE
 date:   2017-04-02
 ---
