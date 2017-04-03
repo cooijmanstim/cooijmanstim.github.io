@@ -13,7 +13,7 @@ description:         "the only winning move is not to play"
 base-url:             "base-url"
 baseurl:             ""
 url:                 "https://cooijmanstim.github.io"
-github:              "https://www.github.com/cooijmanstim"
+github:              "https://github.com/cooijmanstim/cooijmanstim.github.io"
 timezone:            UTC
 
 # Custom vars
