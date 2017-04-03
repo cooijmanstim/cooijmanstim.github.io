@@ -16,6 +16,8 @@ The official way to sample from an Orderless NADE model is to uniformly choose a
 
 Gibbs sampling from Orderless NADE has been explored before by Yao et al. (https://arxiv.org/abs/1409.0585), but with the intention of coming up with a faster way to sample, not a slower one. Yao et al. get the desired speedup by resampling the masked out block of variables mutually independently, i.e. in one shot. We've found that for music this still produces better samples than the original, ancestral Orderless NADE process!
 
+My overall architecture is just a convnet mapping from image and mask to reconstructed image. The caption is run through a word-level Quasi-RNN for efficiency (I care more about speed than capacity because I think the caption is going to provide very little information anyway). The RNN hidden states are merged into the convnet through attention; every few layers, I do a dot product with a learned metric between the convnet featuremaps and the RNN hidden states to get a tensor of shape `height * width * time` indicating relevancies of each RNN state to each pixel in the featuremap. This tensor is run through a softmax to get weights for a convex combination of RNN hidden states to be added to each feature vector in the convnet activations.
+
 Here are some animations of the Gibbs process arriving at a solution:
 
 <img src="/assets/images/sample_2017-04-02/gibbs_0.gif">
