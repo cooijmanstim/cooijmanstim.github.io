@@ -18,6 +18,25 @@ Gibbs sampling from Orderless NADE has been explored before by Yao et al. (https
 
 Here are some animations of the Gibbs process arriving at a solution:
 
+<img src="/assets/images/sample_2017-04-02/gibbs_0.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_1.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_2.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_3.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_4.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_5.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_6.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_7.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_8.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_9.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_10.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_11.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_12.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_13.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_14.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_15.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_16.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_17.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_18.gif">
+<img src="/assets/images/sample_2017-04-02/gibbs_19.gif">
 
-
-I seem to need to run the Gibbs chain for longer or fiddle with the annealing schedule. Also it seems to be fond of extreme values (black, hard red/green/blue) which doesn't really make sense as I've discretized the RGB values into 256 categories each; the endpoints are not special.
+I seem to need to run the Gibbs chain for longer or to fiddle with the annealing schedule. Also it seems to be fond of extreme values (black, hard red/green/blue) which doesn't really make sense as I've discretized the RGB values into 256 categories each; the endpoints are not special.
