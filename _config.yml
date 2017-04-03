@@ -8,9 +8,9 @@ gems: [jekyll-paginate]
 paginate_path: "page:num"
 
 # Setup
-title:               Tim Coodgemans
-tagline:             "Test blog for editing"
-description:         "Testing blog for editing."
+title:               Simplifying Assumptions
+tagline:             "the only winning move is not to play"
+description:         "A blog!"
 base-url:             "base-url"
 baseurl:             ""
 url:                 "https://cooijmanstim.github.io"
