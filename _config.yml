@@ -9,8 +9,7 @@ paginate_path: "page:num"
 
 # Setup
 title:               Simplifying Assumptions
-tagline:             "the only winning move is not to play"
-description:         "A blog!"
+description:         "the only winning move is not to play"
 base-url:             "base-url"
 baseurl:             ""
 url:                 "https://cooijmanstim.github.io"
