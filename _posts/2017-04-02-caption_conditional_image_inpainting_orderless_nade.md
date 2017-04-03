@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Caption-conditional image inpainting using orderless NADE
+title: Caption-conditional image inpainting using Orderless NADE
 date:   2017-04-02
 ---
+
+### Caption-conditional image inpainting using Orderless NADE
 
 This is the first post of a few on my approach to Aaron Courville's Deep Learning class project of winter 2017 at UdeM. The goal is to do image inpainting conditioned on captions. See <https://ift6266h17.wordpress.com/project-description/> for details.
 
