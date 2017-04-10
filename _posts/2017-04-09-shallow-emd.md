@@ -17,26 +17,26 @@ I've messed with residual and dilated convolutions but no particular luck. Dilat
 
 Below are some samples from a shallow EMD L1 model. First, Gibbs samples:
 
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_13.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_5.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_4.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_11.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_12.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_7.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_6.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_17.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_15.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_19.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_1.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_3.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_8.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_2.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_10.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_0.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_9.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_16.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_18.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/gibbs_14.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/13.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/5.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/4.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/11.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/12.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/7.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/6.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/17.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/15.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/19.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/1.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/3.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/8.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/2.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/10.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/0.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/9.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/16.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/18.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_independent_gibbs_2017-04-09T18:55:11.881425_T1.0/14.gif">
 
 I was also interested to see how ancestral samples look. For ancestral sampling, one has to choose an ordering according to which to sample.
 I tried three cases: orderless (random) ordering, greedy ordering (sample the variable with the lowest entropy first), antigreedy ordering (sample the variable with the highest entropy first).
@@ -47,70 +47,70 @@ However I was never sure whether it would also help during generation.
 
 Orderless:
 
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_13.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_5.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_4.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_11.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_12.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_7.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_6.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_17.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_15.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_19.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_1.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_3.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_8.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_2.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_10.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_0.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_9.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_16.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_18.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/gibbs_14.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/13.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/5.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/4.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/11.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/12.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/7.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/6.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/17.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/15.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/19.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/1.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/3.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/8.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/2.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/10.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/0.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/9.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/16.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/18.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_orderless_ancestral_2017-04-09T05:25:22.139241_T1.0/14.gif">
 
 Greedy:
 
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_13.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_5.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_4.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_11.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_12.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_7.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_6.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_17.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_15.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_19.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_1.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_3.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_8.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_2.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_10.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_0.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_9.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_16.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_18.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/gibbs_14.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/13.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/5.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/4.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/11.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/12.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/7.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/6.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/17.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/15.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/19.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/1.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/3.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/8.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/2.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/10.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/0.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/9.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/16.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/18.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_greedy_ancestral_2017-04-09T01:13:12.489489_T1.0/14.gif">
 
 Antigreedy:
 
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_13.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_5.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_4.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_11.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_12.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_7.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_6.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_17.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_15.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_19.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_1.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_3.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_8.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_2.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_10.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_0.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_9.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_16.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_18.gif">
-<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/gibbs_14.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/13.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/5.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/4.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/11.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/12.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/7.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/6.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/17.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/15.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/19.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/1.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/3.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/8.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/2.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/10.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/0.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/9.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/16.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/18.gif">
+<img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/14.gif">
 
