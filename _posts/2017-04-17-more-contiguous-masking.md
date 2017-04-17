@@ -16,35 +16,35 @@ As promised in the last post, I've been working on more contiguous forms of mask
 <tbody>
 
 <tr><td>Greedy</td><td>
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12:07:03.690342_T1.0/13.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12:07:03.690342_T1.0/5.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12:07:03.690342_T1.0/4.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12:07:03.690342_T1.0/11.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12:07:03.690342_T1.0/12.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12T19:07:03.690342_T1.0/13.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12T19:07:03.690342_T1.0/5.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12T19:07:03.690342_T1.0/4.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12T19:07:03.690342_T1.0/11.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_greedy_ancestral_2017-04-12T19:07:03.690342_T1.0/12.gif">
 </td></tr>
 
 <tr><td>Antigreedy</td><td>
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12:07:03.690342_T1.0/7.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12:07:03.690342_T1.0/6.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12:07:03.690342_T1.0/17.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12:07:03.690342_T1.0/15.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12:07:03.690342_T1.0/19.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12T19:07:03.690342_T1.0/7.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12T19:07:03.690342_T1.0/6.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12T19:07:03.690342_T1.0/17.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12T19:07:03.690342_T1.0/15.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_antigreedy_ancestral_2017-04-12T19:07:03.690342_T1.0/19.gif">
 </td></tr>
 
 <tr><td>Orderless</td><td>
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12:07:03.690342_T1.0/1.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12:07:03.690342_T1.0/3.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12:07:03.690342_T1.0/8.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12:07:03.690342_T1.0/2.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12:07:03.690342_T1.0/10.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12T19:07:03.690342_T1.0/1.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12T19:07:03.690342_T1.0/3.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12T19:07:03.690342_T1.0/8.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12T19:07:03.690342_T1.0/2.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_orderless_ancestral_2017-04-12T19:07:03.690342_T1.0/10.gif">
 </td></tr>
 
 <tr><td>Gibbs</td><td>
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12:07:03.690342_T1.0/0.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12:07:03.690342_T1.0/9.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12:07:03.690342_T1.0/16.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12:07:03.690342_T1.0/18.gif">
-<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12:07:03.690342_T1.0/14.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12T19:07:03.690342_T1.0/0.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12T19:07:03.690342_T1.0/9.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12T19:07:03.690342_T1.0/16.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12T19:07:03.690342_T1.0/18.gif">
+<img src="/assets/images/sample_2017-04-12/sample_emd2_deepish_contiguous_independent_gibbs_2017-04-12T19:07:03.690342_T1.0/14.gif">
 </td></tr>
 
 </tbody>
