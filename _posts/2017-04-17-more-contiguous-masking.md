@@ -74,7 +74,7 @@ $$
 \Pr(k | p) = \binom{n}{k} p^k (1 - p)^{n - k}
 $$
 
-If only we could find some prior distribution over $p$ to make the expectation uniform...
+If only we could find some prior distribution over $p$ to make the expectation uniform, i.e. we want that
 
 $$
 \int_0^1 \Pr(k | p) \Pr(p) dp = \frac{1}{n + 1}
