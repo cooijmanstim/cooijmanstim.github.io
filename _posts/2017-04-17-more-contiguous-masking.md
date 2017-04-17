@@ -52,7 +52,7 @@ As promised in the last post, I've been working on more contiguous forms of mask
 
 There's another approach I'd like to explore, in which I stick with the idea of using independent Bernoullis to decide what to mask out, but instead of taking them as-is I mask out a whole neighborhood around each masked-out variable:
 
-<iframe src="/assets/contiguous_masking.html" width="100%"></iframe>
+<iframe src="/assets/contiguous_masking.html" width="100%" height="1000"></iframe>
 
 I mask out the neighborhood by taking a conjunction of translations of the Bernoulli mask. This increases the number of variables masked out, so in order for \(p\) to have the same meaning I must use a transformed value \(q\) such that
 
