@@ -93,6 +93,8 @@ $$
 \end{align}
 $$
 
+where $B$ is the [Beta function](https://en.wikipedia.org/wiki/Beta_function).
+
 Putting everything together, I sample a probability $p \sim U(0, 1)$, compute $q \gets p^{1 / a}$, sample a mask according to independent Bernoullis with probability $q$, and conjoin $a$ local translations of the mask to obtain a contiguish mask.
 
 Results to follow.
