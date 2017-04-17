@@ -114,3 +114,4 @@ Antigreedy:
 <img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/18.gif">
 <img src="/assets/images/sample_2017-04-09/sample_firstemd_antigreedy_ancestral_2017-04-09T03:19:25.120414_T1.0/14.gif">
 
+Interestingly, the greedy ordering does not work outward-in as much as I expected it to. Also antigreedy seems to be the only strategy here that succeeds at generating some structure. I believe the overall failure to do this is due to the model learning only very local relationships. At training time, I draw fully random masks and so there are always some nearby unmasked pixels for the model to depend on. I will experiment with training with large contiguous masks instead.
