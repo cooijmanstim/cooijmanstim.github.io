@@ -71,7 +71,7 @@ It's not obvious how to do this in the presence of potentially overlapping neigh
 As already stated, given Bernoulli masking probability \(p\), the mask size \(k\) follows a binomial distribution:
 
 $$
-\Pr(k | p) = \choose{k}{n} p^k (1 - p)^{n - k}
+\Pr(k | p) = \binom{n}{k} p^k (1 - p)^{n - k}
 $$
 
 If only we could find some prior distribution over \(p\) to make the expectation uniform...
@@ -84,10 +84,10 @@ where \(n + 1\) is the number of possible values \(k\) can take on. The miracle 
 
 $$
 \int_0^1 \Pr(k | p) \Pr(p) dp =
-\int_0^1 \choose{k}{n} p^k (1 - p)^{n - k} dp =
-\choose{k}{n} \int_0^1 p^k (1 - p)^{n - k} dp =
-\choose{k}{n} B(k + 1, n - k + 1) =
-\choose{k}{n} \frac{\Gamma(k + 1) \Gamma(n - k + 1)}{\Gamma(n + 2)} =
+\int_0^1 \binom{n}{k} p^k (1 - p)^{n - k} dp =
+\binom{n}{k} \int_0^1 p^k (1 - p)^{n - k} dp =
+\binom{n}{k} B(k + 1, n - k + 1) =
+\binom{n}{k} \frac{\Gamma(k + 1) \Gamma(n - k + 1)}{\Gamma(n + 2)} =
 \frac{n!}{k!(n - k)!} \frac{k! (n - k)!}{(n + 1)!} =
 \frac{1}{n + 1}.
 $$
