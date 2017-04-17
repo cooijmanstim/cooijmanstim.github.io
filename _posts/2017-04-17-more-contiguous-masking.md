@@ -83,13 +83,14 @@ $$
 where \(n + 1\) is the number of possible values \(k\) can take on. The miracle occurs when we let \(Pr(p)\) be the uniform distribution on the unit interval. Then
 
 $$
-\int_0^1 \Pr(k | p) \Pr(p) dp =
-\int_0^1 \binom{n}{k} p^k (1 - p)^{n - k} dp =
-\binom{n}{k} \int_0^1 p^k (1 - p)^{n - k} dp =
-\binom{n}{k} B(k + 1, n - k + 1) =
-\binom{n}{k} \frac{\Gamma(k + 1) \Gamma(n - k + 1)}{\Gamma(n + 2)} =
-\frac{n!}{k!(n - k)!} \frac{k! (n - k)!}{(n + 1)!} =
-\frac{1}{n + 1}.
+\begin{align}
+\int_0^1 \Pr(k | p) \Pr(p) dp &= \int_0^1 \binom{n}{k} p^k (1 - p)^{n - k} dp
+                           \\ &= \binom{n}{k} \int_0^1 p^k (1 - p)^{n - k} dp
+                           \\ &= \binom{n}{k} B(k + 1, n - k + 1)
+                           \\ &= \binom{n}{k} \frac{\Gamma(k + 1) \Gamma(n - k + 1)}{\Gamma(n + 2)}
+                           \\ &= \frac{n!}{k!(n - k)!} \frac{k! (n - k)!}{(n + 1)!}
+                           \\ &= \frac{1}{n + 1}.
+\end{align}
 $$
 
 Putting everything together, I sample a probability \(p \sim U(0, 1)\), compute \(q \gets p^{1 / a}\), sample a mask according to independent Bernoullis with probability \(q\), and conjoin \(a\) local translations of the mask to obtain a contiguish mask.
