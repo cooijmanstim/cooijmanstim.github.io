@@ -1,3 +1,3 @@
 # something like
-for dir in ~/results/mscoconet/sample_firstemd_*_2017-04-09*; do rsync  -av --prune-empty-dirs --include '*/' --include '*.gif' --exclude '*' $dir .; done
+for dir in /data/lisatmp4/cooijmat/run/mscoconet/sample_emd2_deepish_contiguish*; do rsync  -av --prune-empty-dirs --include '*/' --include '*.gif' --exclude '*' $dir .; done
 
