@@ -8,7 +8,15 @@ date:   2017-04-23
 
 These are samples from the same model as those in [this post](https://cooijmanstim.github.io/2017/04/21/more-contiguous-masking-results/). The only thing that's different is that I've messed with the distribution temperature and the gibbs annealing schedule (the schedule from [this paper](https://arxiv.org/abs/1409.0585) but with different hyperparameters).
 
-Changing the temperature:
+Changing the temperature of a categorical distribution reduces or increases its entropy; the temperature can be used to interpolate between a deterministic ($T = 0$) or uniform ($T = \infty$) distribution. Temperature is implemented by raising the probability to a power $T$ and then renormalizing:
+
+$$\widetilde{p} \propto p^T$$
+
+The rationale for increasing the temperature is because models trained by maximum likelihood tend to be uncertain and spread probability around where they shouldn't. Certainly if we care about getting high-quality samples rather than likelihood, we'd like to sample from a peakier distribution.
+
+Upping the temperature of conditional distributions in autoregressive models isn't quite justified though. You want to increase the temperature of the joint, not of distributions over individual variables. In the limit $T \to 0$, the distribution becomes a detemrinistic argmax, and if you do this one variable at a time you're basically sampling each variable greedily. Instead, people use things like beam search if they want to find high-probability samples.
+
+Here's how changing the temperature affects the samples:
 
 <table>
 <thead>
@@ -52,13 +60,21 @@ Changing the temperature:
 </tbody>
 </table>
 
-Changing the schedule ($p_max = 0.5$ everywhere):
+The Gibbs annealing schedule from [Yao et al](https://arxiv.org/abs/1409.0585) is a truncated linear schedule. If $n$ is the index of the current Gibbs step, and $N$ is the total number of Gibbs steps to be taken, then each variable is resampled with probability
+
+$$\alpha_n = max(\alpha_{min}, \alpha_{max} - \frac{n}{N} \frac{\alpha_{max} - \alpha_{min}}{\eta})$$
+
+Basically, if $\eta = 1$, it starts at $\alpha_{max}$ and drops down linearly to $\alpha_{min}$. If $\eta < 1$, it drops down faster and becomes constant as soon as it crosses $\alpha_{min}$.
+
+In my previous music work the default schedule of $\alpha_{max} = 0.9$, $\alpha_{min} = 0.1$ and $\eta = 0.7$ seemed to just work. In the image inpainting case it seems like there are waaay too may variables to sample, and that much more time should be spent resampling smaller subsets of variables. Smaller subsets means more context means more information means less entropy, supposedly, so this should have a similar effect as reducing temperature.
+
+Here's what it does ($\alpha_{max} = 0.5$ everywhere):
 
 <table>
 <thead>
 <th>Temperature</th>
-<th>$p_{min}$</th>
-<th>$\alpha$</th>
+<th>$\alpha_{min}$</th>
+<th>$\eta$</th>
 <th>Samples</th>
 </thead>
 <tbody>
