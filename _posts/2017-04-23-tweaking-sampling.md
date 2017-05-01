@@ -66,7 +66,7 @@ $$\alpha_n = max(\alpha_{min}, \alpha_{max} - \frac{n}{N} \frac{\alpha_{max} - \
 
 Basically, if $\eta = 1$, it starts at $\alpha_{max}$ and drops down linearly to $\alpha_{min}$. If $\eta < 1$, it drops down faster and becomes constant as soon as it crosses $\alpha_{min}$.
 
-In my previous music work the default schedule of $\alpha_{max} = 0.9$, $\alpha_{min} = 0.1$ and $\eta = 0.7$ seemed to just work. In the image inpainting case it seems like there are waaay too may variables to sample, and that much more time should be spent resampling smaller subsets of variables. Smaller subsets means more context means more information means less entropy, supposedly, so this should have a similar effect as reducing temperature.
+In my previous music work the default schedule of $\alpha_{max} = 0.9$, $\alpha_{min} = 0.1$ and $\eta = 0.7$ seemed to just work. In the image inpainting case it seems like there are waaay too may variables to sample, and that much more time should be spent resampling smaller subsets of variables. Smaller subsets means more context means more information means less entropy, supposedly, so this should have a similar effect as reducing temperature. However, our Gibbs procedure has a backtracking flavor to it, as the model gets to revisit previous decisions.
 
 Here's what it does ($\alpha_{max} = 0.5$ everywhere):
 
