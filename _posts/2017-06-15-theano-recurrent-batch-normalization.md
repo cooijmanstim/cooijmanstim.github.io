@@ -7,7 +7,7 @@ date:   2017-06-15
 ### Less painful Recurrent Batch Normalization in Theano
 (Alternative title: the only good thing I ever done)
 
-My debut [Recurrent Batch Normalization](https://arxiv.org/abs/1603.09025) works great but is impossible to implement without breaking absolutely all of your abstractions. Personally I've switched to [Layer Normalization](https://arxiv.org/abs/1607.06450), but thanks to fellow MILA student Olivier Mastropietro I was reminded of [a script](https://github.com/cooijmanstim/Attentive_reader/blob/bn/codes/att_reader/popstats.py) I wrote back when I was working on recurrent batch normalization.
+My debut [Recurrent Batch Normalization](https://arxiv.org/abs/1603.09025) works great but is impossible to implement without breaking absolutely all of your abstractions. Personally I've switched to [Layer Normalization](https://arxiv.org/abs/1607.06450) because it's just as good and drastically simpler, but thanks to fellow MILA student Olivier Mastropietro I was reminded of [a script](https://github.com/cooijmanstim/Attentive_reader/blob/bn/codes/att_reader/popstats.py) I wrote back when I was working on recurrent batch normalization.
 
 In particular, I was trying to shoehorn batch norm into Caglar Gulcehre's Attentive Reader code. As always when working with Other People's Code(tm), I try to avoid venturing into the bowels, so I wrote code that will take an arbitrary BN-enabled training graph and hack it up to get the corresponding inference graph.
 
