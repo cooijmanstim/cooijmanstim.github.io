@@ -19,7 +19,7 @@ In order to export the batch statistics to the "outer" graph so I can estimate p
 
 In the end, the code works for any level of nesting of Scan loops (including when you have no Scan at all). I suppose it would have been strategic to publicize this code back then, but perhaps it can still serve as a historical testament to the wicked rituals we had to go through back in the day of symbolic computation graphs. You know, before we all switched to PyTorch.
 
-The code is [here](https://github.com/cooijmanstim/Attentive_reader/blob/bn/codes/att_reader/popstats.py) and a usage example is [here](https://github.com/cooijmanstim/Attentive_reader/blob/bn/codes/att_reader/attentive_reader.py#L286-L346). I reproduce my baby it in all its glory below:
+The code is [here](https://github.com/cooijmanstim/Attentive_reader/blob/bn/codes/att_reader/popstats.py) and a usage example is [here](https://github.com/cooijmanstim/Attentive_reader/blob/bn/codes/att_reader/attentive_reader.py#L286-L346). I reproduce my baby in all its glory below:
 
 ```python
 import sys, cPickle as pkl
