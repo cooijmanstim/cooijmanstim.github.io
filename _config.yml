@@ -1,7 +1,11 @@
-title:               Simplifying Assumptions
-description:         "the only winning move is not to play"
+title:               "Tim Cooijmans"
+description:         "Machine Learning Researcher"
+author:      "Tim Cooijmans"
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
 theme: jekyll-theme-midnight
+#remote_theme: pages-themes/midnight@v0.2.0
 permalink:           pretty
 relative_permalinks: false
 paginate:            5

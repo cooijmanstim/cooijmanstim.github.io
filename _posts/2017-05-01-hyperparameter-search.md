@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: "Hyperparameter search results"
 date:   2017-05-01
 ---

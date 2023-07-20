@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: Caption-conditional image inpainting using Orderless NADE
 date:   2017-04-02
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: New inpainting samples
 date:   2017-04-09
 ---

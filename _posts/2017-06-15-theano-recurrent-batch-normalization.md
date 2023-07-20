@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: Less painful Recurrent Batch Normalization in Theano
 date:   2017-06-15
 ---

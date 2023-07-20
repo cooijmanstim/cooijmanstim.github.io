@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: "More contiguous masking: results"
 date:   2017-04-21
 ---
