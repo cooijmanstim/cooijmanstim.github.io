@@ -2,6 +2,7 @@
 layout: blog
 title: Less painful Recurrent Batch Normalization in Theano
 date:   2017-06-15
+category: blog
 ---
 
 ### Less painful Recurrent Batch Normalization in Theano

@@ -9,5 +9,8 @@ theme: jekyll-theme-midnight
 permalink:           pretty
 relative_permalinks: false
 paginate:            5
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate_path: "page:num"
+collections:
+  - publications
+  - blogposts

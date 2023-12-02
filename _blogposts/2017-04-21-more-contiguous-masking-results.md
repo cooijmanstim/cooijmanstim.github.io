@@ -2,6 +2,7 @@
 layout: blog
 title: "More contiguous masking: results"
 date:   2017-04-21
+category: blog
 ---
 
 ### More contiguous masking: results

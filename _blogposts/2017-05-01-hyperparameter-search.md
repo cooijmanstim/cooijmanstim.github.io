@@ -2,6 +2,7 @@
 layout: blog
 title: "Hyperparameter search results"
 date:   2017-05-01
+category: blog
 ---
 
 ### Hyperparameter search results

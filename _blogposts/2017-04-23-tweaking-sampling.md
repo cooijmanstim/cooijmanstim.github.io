@@ -2,6 +2,7 @@
 layout: blog
 title: "Tweaking the generative process"
 date:   2017-04-23
+category: blog
 ---
 
 ### Tweaking the generative process
