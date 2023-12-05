@@ -69,7 +69,7 @@ section.publications h2 {
 }
 @media (min-width: 500px) {
   .publication {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-areas: "pub-thumbnail pub-blurb";
   }
   .publication .thumbnail {margin:1em 0 1em}
@@ -78,7 +78,7 @@ section.publications h2 {
 /* reduce margins when vertical because they don't collapse -__- */
 .publication .thumbnail {margin:0 1em 1ex}
 .publication .blurb {margin:0 1em 0}
-.publication {padding:1em;margin:1em}
+.publication {margin:1em 0 1em;padding:1em 0 1em}
 
 .publication img {max-width:100%;height:auto}
 .publication .thumbnail {display:flex;align-items:center}
