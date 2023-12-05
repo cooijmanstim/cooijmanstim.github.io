@@ -1,29 +1,24 @@
-<table class="publications">
-<colgroup>
-<col span="1" style="width:35%">
-<col span="1" style="width:65%">
-</colgroup>
-<tbody>
+<div class="publications">
 {% for pub in site.data.publications %}
-<tr class="publication">
+<div class="publication">
 
-<td class="thumbnail">
+<div class="thumbnail">
 {% if pub.docurl %}
 <a href="{{pub.docurl}}"><img src="{{'/assets/images/publications/'|append:pub.image|relative_url}}"></a>
 {% else %}
 <img src="{{'/assets/images/publications/'|append:pub.image|relative_url}}">
 {% endif %}
-</td><td class="blurb">
+</div>
+<div class="blurb">
 {% if pub.docurl %}<a href="{{pub.docurl}}">{{pub.blurb|markdownify}}</a>
 {% else %} {{pub.blurb|markdownify}}
 {% endif %}
 <br>
 <span class="authors">{{pub.authors}}.</span>
 <span class="venue">{{pub.venue}}</span>
-</td>
+</div>
 
-</tr>
+</div>
 {% endfor %}
-</tbody>
-</table>
+</div>
 

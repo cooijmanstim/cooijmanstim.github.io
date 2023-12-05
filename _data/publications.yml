@@ -61,7 +61,7 @@
   docurl: https://arxiv.org/abs/1605.02688
   authors: Theano development team
   venue: 2016.
-  image: theano.svg
+  image: theano.png
 - blurb: "SESAME: **radiation simulation** toolkit to modify geometry between irradiation and decay stages."
   docurl: https://edms.cern.ch/document/1520812/1
   authors: Tim Cooijmans, Moritz Guthoff

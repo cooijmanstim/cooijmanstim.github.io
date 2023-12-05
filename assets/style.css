@@ -6,7 +6,6 @@ body {
 p { text-align: justify }
 strong { font-weight: 700; }
 a {text-decoration:none}
-table.publications td.blurb p {display:inline;padding:0em} /* squash spurious <p> from markdownify */
 
 .wrapper {max-width:55em; margin-left:auto; margin-right:auto}
 
@@ -22,16 +21,6 @@ ul.hmenu li{
   list-style-type: none;
   /*padding: 1em;*/
 }
-
-table.publications {table-layout:fixed}
-.publication {border: 1px solid blue}
-.publication img {max-width:100%}
-.publication td {padding:1em}
-.publication td.thumbnail {background-color:white}
-/*.publication td {vertical-align:top}*/
-.publication .tagline{}
-.publication .authors{font-size:smaller}
-.publication .venue{font-size:smaller}
 
 .header {
   background-image: url('images/cms.jpg');
@@ -63,6 +52,7 @@ table.publications {table-layout:fixed}
   font-size: larger;
   font-weight: bolder;
 }
+
 hr {
   border: 1px solid color-mix(in srgb, currentcolor 75%, transparent);
 }
@@ -70,6 +60,34 @@ section.publications h2 {
   font-size: larger;
   font-weight: bolder;
 }
+.publication {grid-area:publication}
+.publication .thumbnail {grid-area:pub-thumbnail}
+.publication .blurb {grid-area:pub-blurb}
+.publication {
+  display: grid;
+  grid-template-areas: "pub-thumbnail" "pub-blurb";
+}
+@media (min-width: 500px) {
+  .publication {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "pub-thumbnail pub-blurb";
+  }
+  .publication .thumbnail {margin:1em 0 1em}
+  .publication .blurb {margin:1em 0 1em}
+}
+/* reduce margins when vertical because they don't collapse -__- */
+.publication .thumbnail {margin:0 1em 1ex}
+.publication .blurb {margin:0 1em 0}
+.publication {padding:1em;margin:1em}
+
+.publication img {max-width:100%;height:auto}
+.publication .thumbnail {display:flex;align-items:center}
+.publication .blurb {vertical-align:top}
+.publication .blurb p {display:inline;padding:0em} /* squash spurious <p> from markdownify */
+.publication .thumbnail {background-color:white}
+.publication .tagline{}
+.publication .authors{font-size:smaller}
+.publication .venue{font-size:smaller}
 
 .blogtitle {margin-bottom:0}
 .blogpost .blogtitle {float:right;margin:0 1ex 1ex}
