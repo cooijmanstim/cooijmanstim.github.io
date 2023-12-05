@@ -98,3 +98,13 @@ section.publications h2 {
 .blogpostcontent img {max-width:100%;margin-left:auto;margin-right:auto}
 .blogpostcontent pre {max-width:100%;margin-left:auto;margin-right:auto;overflow:visible}
 
+ul.post-list{margin-top:2em}
+ul.post-list li {
+  display:block;
+  margin:1em
+}
+ul.post-list li .post-meta {
+  font-size: smaller;
+  padding-right: 1em;
+}
+
