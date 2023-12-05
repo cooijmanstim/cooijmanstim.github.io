@@ -1,6 +1,7 @@
 body {
   font-size: 12pt;
   font-family: "Martel", serif;
+  hyphens: auto;
 }
 p { text-align: justify }
 strong { font-weight: 700; }
@@ -52,7 +53,7 @@ table.publications {table-layout:fixed}
 }
 
 .bio .blurb {
-  column-count: 2;
+  column-width: 15em;
   column-gap: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
