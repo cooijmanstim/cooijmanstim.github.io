@@ -1,16 +1,13 @@
-title:               "Tim Cooijmans"
-description:         "Machine Learning Researcher"
-author:      "Tim Cooijmans"
+title: "Tim Cooijmans"
+description: "Machine Learning Researcher"
+author: "Tim Cooijmans"
 markdown: kramdown
 kramdown:
-  math_engine: mathjax
-theme: jekyll-theme-midnight
+math_engine: mathjax
+#theme: jekyll-theme-midnight
 #remote_theme: pages-themes/midnight@v0.2.0
-permalink:           pretty
+permalink: pretty
 relative_permalinks: false
-paginate:            5
+paginate: 5
 plugins: [jekyll-paginate]
 paginate_path: "page:num"
-collections:
-  - publications
-  - blogposts

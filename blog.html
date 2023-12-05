@@ -1,13 +1,15 @@
 ---
-layout: blog
+layout: default
 ---
-<div class="home">
-  <ul class="post-list">
-    {% for post in site.blogposts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<h1 class="blogtitle">Simplifying Assumptions</h1>
+<p class="blogpostmetadata">
+by <span class="author"><a href="{{'/'|relative_url}}">Tim Cooijmans</a></span>
+</p>
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

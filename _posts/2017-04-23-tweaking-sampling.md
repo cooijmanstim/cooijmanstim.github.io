@@ -1,11 +1,9 @@
 ---
-layout: blog
+layout: blogpost
 title: "Tweaking the generative process"
 date:   2017-04-23
 category: blog
 ---
-
-### Tweaking the generative process
 
 These are samples from the same model as those in [this post](https://cooijmanstim.github.io/2017/04/21/more-contiguous-masking-results/). The only thing that's different is that I've messed with the distribution temperature and the gibbs annealing schedule (the schedule from [this paper](https://arxiv.org/abs/1409.0585) but with different hyperparameters).
 

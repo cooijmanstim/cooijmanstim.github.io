@@ -1,76 +1,80 @@
-- title: Meta-Value Learning
-  tagline: solving **social dilemmas** with a novel general **meta-learning** framework.
+- blurb: "Meta-Value Learning: solving **social dilemmas** with a novel general **meta-learning** framework."
   docurl: https://arxiv.org/abs/2307.08863
   authors: Tim Cooijmans, Milad Aghajohari, Aaron Courville
   venue: ICML 2023 Frontiers workshop. Submitted to ICLR 2024.
-- title: Best-Response Shaping
-  tagline: solving **social dilemmas** by **differentiating** through the **best response**.
+  image: meva.png
+- blurb: "Best-Response Shaping: solving **social dilemmas** by **differentiating** through the **best response**."
   authors: Milad Aghajohari, Tim Cooijmans, Juan Augustin Duque, Shunichi Akatsuka, Aaron Courville
   venue: Submitted to ICLR 2024.
-- title: SUNMASK
-  tagline: Mask-Enhanced Control in Step-Unrolled **Denoising Autoencoders**.
+  image: brs.png
+- blurb: "SUNMASK: Mask-Enhanced Control in Step-Unrolled **Denoising Autoencoders**."
   docurl: https://link.springer.com/chapter/10.1007/978-3-031-29956-8_10
-  authors: Kyle Kastner, Tim Cooijmans, Yusong Wu, Aaron Courville.
+  authors: Kyle Kastner, Tim Cooijmans, Yusong Wu, Aaron Courville
   venue: EvoMUSART 2023.
-- title: MIDI-DDSP
-  tagline: detailed **control** of **musical performance** via **hierarchical modeling**.
+  image: sunmask.png
+- blurb: "MIDI-DDSP: detailed **control** of **musical performance** via **hierarchical modeling**."
   docurl: https://arxiv.org/abs/2112.09312
   authors: Yuson Wu, Ethan Manilow, Yi Deng, Rigel Swavely, Kyle Kastner, Tim Cooijmans, Aaron Courville, Anna Huang, Jesse Engel
   venue: ICLR 2022.
-- title: On the Variance of UORO
-  tagline: an analysis of **variance (reduction)** for approx **forward-mode autodiff**.
+  image: mididdsp2.png
+- blurb: "On the Variance of UORO: an analysis of **variance (reduction)** for approx **forward-mode autodiff**."
   docurl: https://arxiv.org/abs/1902.02405
   authors: Tim Cooijmans, James Martens
   venue: 2018.
-- title: Harmonic Recomposition using **Conditional Autoregressive** Modeling.
+  image: uoro.png
+- blurb: "Harmonic Recomposition using **Conditional Autoregressive** Modeling."
   docurl: https://arxiv.org/abs/1811.07426
   authors: Kyle Kastner, Rithesh Kumar, Tim Cooijmans, Aaron Courville
   venue: ICML 2018 workshop.
-- title: Coconet
-  tagline: the ML model behind today's Bach Doodle
+  image: harmonicrecomposition.png
+- blurb: "Coconet: the ML model behind today's Bach Doodle."
   docurl: https://magenta.tensorflow.org/coconet
   authors: Anna Huang, Tim Cooijmans, Monica Dinculescu, Adam Roberts, Curtis Hawthorne
   venue: Blog post, 2018.
-- title: Memorization in **Recurrent Neural Networks**
+  image: doodle.jpg
+- blurb: "Memorization in **Recurrent Neural Networks**."
   docurl: https://www.padl.ws/papers/Paper%2026.pdf
   authors: Tegan Maharaj, David Krueger, Tim Cooijmans
   venue: ICML 2017 PADL workshop.
-- title: Counterpoint by Convolution
-  tagline: a **convolutional** model of Bach's chorales and **Gibbs sampling** strategy.
+  image: rnnmemo.png
+- blurb: "Counterpoint by Convolution: a **convolutional** model of Bach's chorales and **Gibbs sampling** strategy."
   docurl: https://arxiv.org/abs/1903.07227
   authors: Anna Huang, Tim Cooijmans, Adam Roberts, Aaron Courville, Douglas Eck
   venue: ISMIR 2017.
-- title: Waybackprop
-  tagline: unlocking **long-term dependencies** with **BPTT** using only **logarithmic space**.
+  image: coconet.png
+- blurb: "Waybackprop: unlocking **long-term dependencies** with **BPTT** using only **logarithmic space**."
   docurl: https://magenta.tensorflow.org/blog/2017/06/01/waybackprop
   authors: Tim Cooijmans
   venue: Blog post, 2017.
-- title: Recurrent Batch Normalization
-  tagline: the **first successful use** of **normalization** in **RNN** transitions.
+  image: waybackprop.png
+- blurb: "Recurrent Batch Normalization: the **first successful use** of **normalization** in **RNN** transitions."
   docurl: https://arxiv.org/abs/1603.09025
   authors: Tim Cooijmans, Nicolas Ballas, César Laurent, Çağlar Gülçehre, Aaron Courville
   venue: ICLR 2017.
-- title: Dynamic Capacity Networks
-  tagline: models that **dynamically allocate capacity** to salient features.
+  image: rbn.png
+- blurb: "Dynamic Capacity Networks: models that **dynamically allocate capacity** to salient features."
   docurl: https://arxiv.org/abs/1511.07838
   authors: Amjad Almahairi, Nicolas Ballas, Tim Cooijmans, Yin Zheng, Hugo Larochelle, Aaron Courville
   venue: ICML 2016.
-- title: Theano 
-  tagline: a Python framework for fast computation of mathematical expressions.
+  image: dcn.png
+- blurb: "Theano: a Python framework for fast computation of mathematical expressions."
   docurl: https://arxiv.org/abs/1605.02688
   authors: Theano development team
   venue: 2016.
-- title: SESAME
-  tagline: radiation simulation toolkit to modify geometry between irradiation and decay stages
+  image: theano.svg
+- blurb: "SESAME: **radiation simulation** toolkit to modify geometry between irradiation and decay stages."
   docurl: https://edms.cern.ch/document/1520812/1
   authors: Tim Cooijmans, Moritz Guthoff
   venue: CERN EDMS, 2015.
-- title: Monte-Carlo simulations of the radiation environment for the CMS experiment
+  image: sesame.png
+- blurb: "**Monte-Carlo simulations** of the radiation environment for the CMS experiment."
   docurl: https://www.sciencedirect.com/science/article/abs/pii/S0168900215014096
   authors: Sophie Mallows, Igor Azhgirey, Igor Bayshev, Ida Bergstrom, Tim Cooijmans, Anne Dabrowski, Lisa Glöggler, Moritz Guthoff, Igor Kurochkin, Helmut Vincke, S Tajeda
   venue: Elba2015 13th Pisa Meeting on Advanced Detectors.
-- title: Technical Proposal for the phase-II upgrade of the Compact Muon Solenoid detector
+  image: cmsfluka.png
+- blurb: "Technical Proposal for the phase-II upgrade of the Compact Muon Solenoid detector."
   docurl: https://edms.cern.ch/ui/#!master/navigator/document?D:100492486:100492486:subDocs
   authors: The CMS collaboration
   venue: CERN EDMS, 2015.
+  image: cmsexploded.png
 

@@ -1,12 +1,9 @@
 ---
-layout: blog
+layout: blogpost
 title: Less painful Recurrent Batch Normalization in Theano
 date:   2017-06-15
 category: blog
 ---
-
-### Less painful Recurrent Batch Normalization in Theano
-(Alternative title: the only good thing I ever done)
 
 My debut [Recurrent Batch Normalization](https://arxiv.org/abs/1603.09025) works great but is impossible to implement without breaking absolutely all of your abstractions. Personally I've switched to [Layer Normalization](https://arxiv.org/abs/1607.06450) because it's just as good and drastically simpler, but thanks to fellow MILA student Olivier Mastropietro I was reminded of [a script](https://github.com/cooijmanstim/Attentive_reader/blob/bn/codes/att_reader/popstats.py) I wrote back when I was working on recurrent batch normalization.
 
@@ -16,7 +13,7 @@ The way it works is -- as you construct your training graph, you label all tenso
 
 This would be trivial if it weren't for Theano's `scan` feature, because everything would be trivial if it weren't for Theano's `scan` feature. Scan encodes loops in the graph, and the way it does this is by representing its loop body as a completely separate "inner" graph, with "inner" inputs that correspond to "outer" inputs to the Scan node, and "inner" outputs that correspond to the "outer" outputs of the Scan node. They correspond but they are not connected, and so you can't just take batch statistics from the "inner" graph and connect them to stuff in the "outer" graph.
 
-In order to export the batch statistics to the "outer" graph so I can estimate population statistics, my code has to add them as extra Scan outputs. Once I get the population statistics, I need to import them back into the "inner" graph by adding appropriate Scan nitsots and mitmots and whatnots. I think I might have ventured deeper into Scan than anyone before me.
+In order to export the batch statistics to the "outer" graph so I can estimate population statistics, my code has to add them as extra Scan outputs. Once I get the population statistics, I need to import them back into the "inner" graph by adding appropriate Scan nitsots and mitmots and whatnots.
 
 In the end, the code works for any level of nesting of Scan loops (including when you have no Scan at all). I suppose it would have been strategic to publicize this code back then, but perhaps it can still serve as a historical testament to the wicked rituals we had to go through back in the day of symbolic computation graphs. You know, before we all switched to PyTorch.
 

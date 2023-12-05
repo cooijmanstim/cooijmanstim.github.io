@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="bio">
+  <div class="header">
+    <p class="headertag">the Compact Muon Solenoid at the Large Hadron Collider</p>
+  </div>
+  <div class="blurb">
+    <h1 class="name">Tim Cooijmans</h1> <span>(pronounced like <em>Coymahns</em>)</span>
+    <ul class="hmenu">
+      <li><a href="{{'/blog'|relative_url}}">Blog</a></li>
+      <li><a href="https://drive.google.com/file/d/1RP0USaRSIXnyVS63G5J0tXXZozJMW__V/view?usp=sharing">Curriculum Vitae</a></li>
+      <li><a href="https://scholar.google.com/citations?user=Ec6vKzwAAAAJ">Google Scholar</a></li>
+    </ul>
+    {% capture blurb %}{% include blurb.md %}{% endcapture %}
+    {{blurb|markdownify}}
+  </div>
+</section>
+<hr>
+<section class="publications">
+  <h2>Publications</h2>
+
+  {%include publications.html%}
+</section>

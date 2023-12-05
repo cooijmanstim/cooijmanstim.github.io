@@ -1,11 +1,9 @@
 ---
-layout: blog
+layout: blogpost
 title: "More contiguous masking: results"
 date:   2017-04-21
 category: blog
 ---
-
-### More contiguous masking: results
 
 Results after training the model with the masking strategy described in [the previous post](https://cooijmanstim.github.io/2017/04/17/more-contiguous-masking/).
 In particular, I mask out 17x17 rectangles. This is squared EMD as before.

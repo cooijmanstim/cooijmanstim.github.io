@@ -1,11 +1,9 @@
 ---
-layout: blog
+layout: blogpost
 title: New inpainting samples
-date:   2017-04-09
+date: 2017-04-09
 category: blog
 ---
-
-### New inpainting samples
 
 I've done a hyperparameter search and found that shallower models are drastically easier to optimize.
 The thing with orderless NADE is that the random masking of the input adds a *lot* of noise to the optimization process, and as a result it is practically impossible to overfit anything.

@@ -1,0 +1,81 @@
+body {
+  font-size: 12pt;
+  font-family: "Martel", serif;
+}
+p { text-align: justify }
+strong { font-weight: 700; }
+a {text-decoration:none}
+table.publications td.blurb p {display:inline;padding:0em} /* squash spurious <p> from markdownify */
+
+.wrapper {max-width:55em; margin-left:auto; margin-right:auto}
+
+ul.hmenu {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin:1em; padding:0;
+}
+ul.hmenu li{
+  display: block;
+  flex: 0 1 auto;
+  list-style-type: none;
+  /*padding: 1em;*/
+}
+
+table.publications {table-layout:fixed}
+.publication {border: 1px solid blue}
+.publication img {max-width:100%}
+.publication td {padding:1em}
+.publication td.thumbnail {background-color:white}
+/*.publication td {vertical-align:top}*/
+.publication .tagline{}
+.publication .authors{font-size:smaller}
+.publication .venue{font-size:smaller}
+
+.header {
+  background-image: url('images/cms.jpg');
+  height: 350px;
+  width: 100%;
+  max-width: 1002px;
+  background-position: left -150px top 40%;
+  background-repeat: no-repeat;
+  margin-left:auto;margin-right:auto;
+  position:relative;
+}
+.header .headertag {
+  background-color: rgba(0%,0%,0%,50%);
+  color: white;
+  position:absolute;
+  margin:0;padding:0.25ex 1ex 0.25ex;
+  bottom:0;right:0;
+  font-size: smaller;
+}
+
+.bio .blurb {
+  column-count: 2;
+  column-gap: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.bio h1.name {
+  display: inline;
+  font-size: larger;
+  font-weight: bolder;
+}
+hr {
+  border: 1px solid color-mix(in srgb, currentcolor 75%, transparent);
+}
+section.publications h2 {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.blogtitle {margin-bottom:0}
+.blogpost .blogtitle {float:right;margin:0 1ex 1ex}
+.blogpostcontent{clear:both}
+.blogposttitle {margin-bottom:0em}
+.blogpostmetadata {font-size:smaller;margin-top:0em}
+
+.blogpostcontent img {max-width:100%;margin-left:auto;margin-right:auto}
+.blogpostcontent pre {max-width:100%;margin-left:auto;margin-right:auto;overflow:visible}
+

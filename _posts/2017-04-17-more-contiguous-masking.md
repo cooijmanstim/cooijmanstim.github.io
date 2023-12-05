@@ -1,11 +1,9 @@
 ---
-layout: blog
+layout: blogpost
 title: More contiguous masking
 date:   2017-04-17
 category: blog
 ---
-
-### More contiguous masking
 
 As promised in the last post, I've been working on more contiguous forms of masking to de-emphasize trivial local correlations when training the model. I've tried masking a randomly positioned 32x32 rectangle, just like I do at generation time, but the results are terrible and I feel like it's too much. Here are some samples from a model trained on squared EMD with 32x32 rectangular masks:
 

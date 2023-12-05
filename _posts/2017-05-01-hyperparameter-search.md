@@ -1,11 +1,9 @@
 ---
-layout: blog
+layout: blogpost
 title: "Hyperparameter search results"
 date:   2017-05-01
 category: blog
 ---
-
-### Hyperparameter search results
 
 I performed a hyperparameter search over models trained with the squared EMD loss and the [contiguish masking](https://cooijmanstim.github.io/2017/04/17/more-contiguous-masking/) I've been talking about.
 

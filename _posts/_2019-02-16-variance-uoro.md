@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blogpost
 title: "On the Variance of Unbiased Online Recurrent Optimization"
 date:   2019-02-16
 category: blog
@@ -10,8 +10,6 @@ MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true}
 });
 </script>
-
-# On the Variance of Unbiased Online Recurrent Optimization
 
 This blog post summarizes the brand new paper [On the Variance of Unbiased Online Recurrent Optimization](https://arxiv.org/abs/1902.02405) (Cooijmans &amp; Martens, 2019), an extensive investigation into the [UORO](https://arxiv.org/abs/1702.05043) (Tallec &amp; Ollivier, 2017) algorithm for online training of recurrent neural networks. The work was done in close collaboration with James Martens, who supervised me during my internship at DeepMind where the work started.
 
