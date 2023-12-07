@@ -98,6 +98,9 @@ section.publications h2 {
 .blogpostcontent img {max-width:100%;margin-left:auto;margin-right:auto}
 .blogpostcontent pre {max-width:100%;margin-left:auto;margin-right:auto;overflow:visible}
 
+.blogpostcontent .captioned_image {max-width:40em;margin-left:auto;margin-right:auto}
+.blogpostcontent .captioned_image .caption {text-align:center}
+
 ul.post-list{margin-top:2em}
 ul.post-list li {
   display:block;

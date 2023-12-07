@@ -3,13 +3,8 @@ layout: blogpost
 title: "On the Variance of Unbiased Online Recurrent Optimization"
 date:   2019-02-16
 category: blog
+imageroot: /assets/images/uoro_2019-02-16/
 ---
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true}
-});
-</script>
 
 This blog post summarizes the brand new paper [On the Variance of Unbiased Online Recurrent Optimization](https://arxiv.org/abs/1902.02405) (Cooijmans &amp; Martens, 2019), an extensive investigation into the [UORO](https://arxiv.org/abs/1702.05043) (Tallec &amp; Ollivier, 2017) algorithm for online training of recurrent neural networks. The work was done in close collaboration with James Martens, who supervised me during my internship at DeepMind where the work started.
 
@@ -25,10 +20,10 @@ $$
 
 Here $x_t$ is an observation made at time $t$, and $\theta_t$ are the RNN's parameters (e.g. weight matrix). As usual, the parameters are shared over time, i.e. $\theta_t = \theta$; having the subscript $t$ on the parameters $\theta$ conveniently lets us refer to the partial derivatives $\frac{\partial h_t}{\partial \theta}$ by the total derivative $\frac{\mathrm{d} h_t}{\mathrm{d} \theta_t}$. We will generally use the notation $\mathcal{J}^{y}_{x}$ for the (total) Jacobian matrix of $y$ with respect to $x$.
 
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://1.bp.blogspot.com/-ywPbITLch04/XGgCW9vWAaI/AAAAAAAAED0/d66ZLao4ekAkZxP-cDa6MwhvhBpW9kB9QCLcBGAs/s1600/rnn_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="419" data-original-width="1263" height="106" src="https://1.bp.blogspot.com/-ywPbITLch04/XGgCW9vWAaI/AAAAAAAAED0/d66ZLao4ekAkZxP-cDa6MwhvhBpW9kB9QCLcBGAs/s320/rnn_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">State propagation through an RNN</td></tr>
-</tbody></table>
+<div class="captioned_image">
+<img src="{{'/assets/images/uoro_2019-02-16/rnn_graph.png'|relative_url}}">
+<p class="caption">State propagation through an RNN</p>
+</div>
 
 At each step, the RNN incurs a loss $L_t$ which is a differentiable function of the hidden state $h_t$. In order to optimize $\theta$ to minimize the total loss $L = \sum_{t = 1}^T L_t$ over a sequence of length $T$, we require an estimate of the gradient $\mathcal{J}^L_{\theta}$.
 
@@ -52,10 +47,10 @@ $$
 
 By following this recursion, we can aggregate the terms $$\mathcal{J}^L_{\theta_t} =\mathcal{J}^L_{h_t} \mathcal{J}^{h_t}_{\theta_t}$$ to compute the gradient. The backpropagation $\mathcal{J}^L_{h_{t + 1}} \mathcal{J}^{h_{t + 1}}_{h_t}$ is a vector-matrix product, which has the same cost as the forward propagation of state $h_t$ in a typical RNN.
 
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://4.bp.blogspot.com/-jravDwO8Sjo/XGgChMXfHdI/AAAAAAAAED4/rnSJq0JMmvYZkVWUPwp9FyxXtthXulPYgCLcBGAs/s1600/backprop_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="448" data-original-width="1269" height="112" src="https://4.bp.blogspot.com/-jravDwO8Sjo/XGgChMXfHdI/AAAAAAAAED4/rnSJq0JMmvYZkVWUPwp9FyxXtthXulPYgCLcBGAs/s320/backprop_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Back-propagation of $\mathcal{J}^L_{h_t}$ by BPTT</td></tr>
-</tbody></table>
+<div class="captioned_image">
+<img src="{{'/assets/images/uoro_2019-02-16/bptt_graph.png'|relative_url}}">
+<p class="caption">Back-propagation of $\mathcal{J}^L_{h_t}$ by BPTT</p>
+</div>
 
 The second factorization (*forward accumulation*) is used by the Real-Time Recurrent Learning algorithm (RTRL). The recursion
 
@@ -66,10 +61,10 @@ $$
 is chronological and can be computed alongside the RNN state.
 Given $$\mathcal{J}^{h_t}_{\theta}$$, we can compute the term $$\mathcal{J}^{L_t}_{\theta} =\mathcal{J}^{L_t}_{h_t} \mathcal{J}^{h_t}_{\theta}$$ and immediately update the parameter $\theta$ (with some technical caveats). The drawback is that the forward propagation $$\mathcal{J}^{h_t}_{h_{t - 1}} \mathcal{J}^{h_{t - 1}}_{\theta}$$ is an expensive matrix-matrix product. Whereas BPTT cheaply propagated a vector $\mathcal{J}^L_{h_t}$ of the same size as the RNN state, RTRL propagates a matrix $\mathcal{J}^{h_t}_{\theta}$ that consists of one parameter-sized vector for each hidden state. Since typically the parameter is quadratic in the size of the hidden state, this is cubic, and the forward-propagation is quartic (i.e. for a meager 100 hidden units, RTRL is 10,000 times more expensive than BPTT!).
 
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://1.bp.blogspot.com/-DteL2nVhHu4/XGgC2wnKWII/AAAAAAAAEEE/PM3bvWYX25AqBVA9Tqr_kPZCnAWSbmVSwCLcBGAs/s1600/rtrl_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="447" data-original-width="1272" height="112" src="https://1.bp.blogspot.com/-DteL2nVhHu4/XGgC2wnKWII/AAAAAAAAEEE/PM3bvWYX25AqBVA9Tqr_kPZCnAWSbmVSwCLcBGAs/s320/rtrl_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Forward-propagation of $$\mathcal{J}^{h_t}_{\theta}$$ by RTRL</td></tr>
-</tbody></table>
+<div class="captioned_image">
+<img src="{{'/assets/images/uoro_2019-02-16/rtrl_graph.png'|relative_url}}">
+<p class="caption">Forward propagation of $\mathcal{J}^{h_t}_{\theta}$ by RTRL</p>
+</div>
 
 It is important to note that the jacobians involved in these recursions depend on the activations $h_t$ and other intermediate quantities. In RTRL, these quantities naturally become available in the order in which they are needed, after which they may be forgotten. BPTT revisits these quantities in reverse order, which requires storing them in a stack.
 
@@ -93,7 +88,7 @@ $$
  \mathcal{J}^{h_t}_{h_s} \nu_s \nu_s^{\top} \mathcal{J}^{h_s}_{\theta_s} .
 $$
 
-The random projections onto $\nu_s$ serve to compress the matrices $$\mathcal{J}^{h_t}_{h_s}$$ and $$\mathcal{J}^{h_s}_{\theta_s}$$ into vector-sized quantities. But accumulating this sum online is still expensive: we must either accumulate the matrix-sized quantities $$\mathcal{J}^{h_t}_{h_s} \nu_s \nu_s^{\top} \mathcal{J}^{h_s}_{\theta_s}$$ or the sequence of pairs of vectors $$\mathcal{J}^{h_t}_{h_s} \nu_s$, $\nu_s^{\top} \mathcal{J}^{h_s}_{\theta_s}$$.
+The random projections onto $\nu_s$ serve to compress the matrices $$\mathcal{J}^{h_t}_{h_s}$$ and $$\mathcal{J}^{h_s}_{\theta_s}$$ into vector-sized quantities. But accumulating this sum online is still expensive: we must either accumulate the matrix-sized quantities $$\mathcal{J}^{h_t}_{h_s} \nu_s \nu_s^{\top} \mathcal{J}^{h_s}_{\theta_s}$$ or the sequence of pairs of vectors $$\mathcal{J}^{h_t}_{h_s} \nu_s, \nu_s^{\top} \mathcal{J}^{h_s}_{\theta_s}$$.
 
 We can pull the same trick again and rely on noise to entangle corresponding pairs. Let $\tau$ be a random vector with expectation $\mathbb{E} [\tau \tau^{\top}] = I$. Then
 
@@ -119,14 +114,10 @@ $$
 
 This joint recursion is similar to that for $$\mathcal{J}^{h_t}_{\theta}$$ in RTRL; the approximation $$\tilde{h}_t \tilde{w}_t^{\top}$$ is used as a rank-one stand-in for $$\mathcal{J}^{h_t}_{\theta}$$. Notice how the unwieldy matrix-matrix product in RTRL has been replaced by a cheap matrix-vector product $$\mathcal{J}^{h_t}_{h_{t - 1}} \tilde{h}_{t - 1}$$: UORO is as cheap as BPTT.
 
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://1.bp.blogspot.com/-I1_oj2scK6o/XGgDi7ctn6I/AAAAAAAAEEU/h41ewDVViGcWCuO-_kRVPEgchrvcDjzugCLcBGAs/s1600/uoro_htilde_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="460" data-original-width="1293" height="113" src="https://1.bp.blogspot.com/-I1_oj2scK6o/XGgDi7ctn6I/AAAAAAAAEEU/h41ewDVViGcWCuO-_kRVPEgchrvcDjzugCLcBGAs/s320/uoro_htilde_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Forward-propagation of noise in UORO</td></tr>
-</tbody></table>
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://1.bp.blogspot.com/-XKND-fGXKWE/XGgDi8VhEcI/AAAAAAAAEEQ/HA_-7U4xTp0LyxsuGJj6eDjIqr5sLQcQgCLcBGAs/s1600/uoro_wtilde_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="246" data-original-width="1235" height="63" src="https://1.bp.blogspot.com/-XKND-fGXKWE/XGgDi8VhEcI/AAAAAAAAEEQ/HA_-7U4xTp0LyxsuGJj6eDjIqr5sLQcQgCLcBGAs/s320/uoro_wtilde_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Accumulation of back-propagated noise in UORO</td></tr>
-</tbody></table>
+<div class="captioned_image">
+<img src="{{'/assets/images/uoro_2019-02-16/uoro_double_graph.png'|relative_url}}">
+<p class="caption">Propagation of noise in UORO, accumulated forward into $\tilde{h}_t$ and backward into $\tilde{w}_t$</p>
+</div>
 
 So that's the basic workings of UORO: randomly project in state space and then randomly project once again in time. Both of these projections introduce errors in the approximation $$\mathcal{J}^{h_t}_{\theta} \approx \tilde{h}_t \tilde{w}_t^{\top}$$, due to connecting the wrong elements together in the matrix-matrix product $$\mathcal{J}^{h_t}_{h_s} \mathcal{J}^{h_s}_{\theta_s}$$ (*spatial* cross-terms) and due to connecting the wrong time steps $q \neq r$ together in $$\mathcal{J}^{h_t}_{h_r} \nu_r \nu_q^{\top} \mathcal{J}^{h_q}_{\theta_q}$$ (*temporal* cross-terms). In expectation, these errors cancel out and the approximation is unbiased.
 
@@ -188,6 +179,7 @@ We also replaced the scalar coefficients $\gamma_t, \beta_t$ by matrices $Q_t$ (
 Let $$b^{(t) \top}_s =\mathcal{J}^{L_t}_{z_s}$$ denote the gradient of the loss at time $t$ with respect to the value of the intermediate $z_s$ variable, and $$J_s \mathcal{J}^{z_s}_{\theta_s}$$ the partial derivatives of $z_s$ with respect to the parameter $\theta$.
 
 Then the total gradient estimate $$\sum_{t \leqslant T} \mathcal{J}^{L_t}_{h_t} \tilde{h}_t \tilde{w}_t^{\top}$$ can be expressed as
+
 $$
 \sum_{t \leqslant T} \left(\begin{array}{c}
   b^{(t)}_1\\
@@ -217,8 +209,9 @@ $$
   J_1\\
   \vdots\\
   J_T
- \end{array}\right)
+ \end{array}\right),
 $$
+
 where $$S^{(t)}_s =\mathbb{1}_{s \leqslant t} I$$
 enforces causality: the estimate $$\mathcal{J}^{L_t}_{h_t} \tilde{h}_t \tilde{w}_t^{\top}$$
 at time $t$ does not involve contributions
@@ -228,11 +221,14 @@ This property already holds on the $b$ side, as
 $$b^{(t)}_s =\mathbb{1}_{s \leqslant t} b^{(t)}_s$$.
 
 Giving names to these concatenated quantities, we may write
+
 $$
  \sum_{t \leqslant T} \mathcal{J}^{L_t}_{h_t} \tilde{h}_t \tilde{w}_t^{\top}
 = \sum_{t \leqslant T} b^{(t) \top} Q u u^{\top} Q^{- 1} S^{(t)} J.
 $$
+
 This is a fairly simple expression, which makes it easy to analyze the behavior of the estimator. We see immediately that the estimator is unbiased, as $\mathbb{E}_u [Q u u^{\top} Q^{- 1}] = Q\mathbb{E}_u [u u^{\top}] Q^{- 1} = Q Q^{- 1} = I$ ($Q$ is assumed to be independent of the noise $u$). In the paper we also derive the variance; for this blog post it will be enough to note that it is dominated by a product of traces,
+
 $$
 V (Q) = \sum_{s \leqslant T} \sum_{t \leqslant T} \operatorname{tr} \left( \sum_{r
  \leqslant T} b^{(s)}_r b_r^{(t) \top} Q_r Q_r^{\top} \right) \operatorname{tr}
@@ -245,6 +241,7 @@ $$
 We wish to minimize this wrt $Q$, but in a way that corresponds to a practical algorithm. We investigate the case where $Q$ has the form $Q_t = \alpha_t Q_0$ for scalar coefficients $\alpha_t$ and a constant $Q_0$ matrix. Intuitively, the $\alpha_t$ could be chosen by an iterative rescaling rule similar to the $\gamma_t, \beta_t$ scheme from UORO, while $Q_0$ would be based on supposedly slow-moving second-order information.
 
 Joint optimization of these quantities turned out to be analytically intractable, and even alternately optimizing the $\alpha_t$ and $Q_0$ is difficult. Still, we made some headway on these problems; of particular interest is the quantity
+
 $$
 B = \sum_{s \leqslant T} \sum_{t \leqslant T} \left( \sum_{q = 1}^{\min (s,
  t)} \alpha_q^{- 2} \| a_q \|^2 \right) \left( \sum_{r \leqslant T}
@@ -252,6 +249,7 @@ B = \sum_{s \leqslant T} \sum_{t \leqslant T} \left( \sum_{q = 1}^{\min (s,
  \leqslant T} \frac{\alpha_r^2}{\alpha_q^2} \| a_q \|^2 \left( \sum_{s =
  q}^T b^{(s)}_r \right) \left( \sum_{t = q}^T b^{(t)}_r \right)^{\top},
 $$
+
 which gives the optimal $Q_0$ as $Q_0 = B^{- 1 / 4}$ when projection occurs in preactivation space (see the paper). The vector $a_t$ is the input to the RNN (i.e. the previous state, the current observation and a bias), which shows up here due to the convenient structure of the backward Jacobian $J_t = \mathcal{J}^{z_t}_{\theta_t} = I \otimes a_t^{\top}$ in the case of
 preactivation-space projection.
 
@@ -299,15 +297,10 @@ $$
 
 Each gradient $$\mathcal{J}^{L_t}_{\theta}$$ is estimated by $$\mathcal{J}^{L_t}_{h_t} \tilde{H}_t (I \otimes \tilde{a}_t) = \operatorname{vec} ( (\mathcal{J}^{L_t}_{h_t} \tilde{H}_t)^\top \tilde{a}_t^\top)$$, which can still be computed without explicitly forming $$\tilde{H}_t (I \otimes \tilde{a}_t^\top)$$.
 
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://1.bp.blogspot.com/-Iia9Kj-7LMk/XGgE87K_azI/AAAAAAAAEEo/KMHmTFkhfQsYgUN5lfeTEH4FwJG5x17CACLcBGAs/s1600/preuoro_htilde_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="464" data-original-width="1275" height="116" src="https://1.bp.blogspot.com/-Iia9Kj-7LMk/XGgE87K_azI/AAAAAAAAEEo/KMHmTFkhfQsYgUN5lfeTEH4FwJG5x17CACLcBGAs/s320/preuoro_htilde_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Forward-propagation of noise in preactivation space</td></tr>
-</tbody></table>
-
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://3.bp.blogspot.com/-lpjM0-osI5E/XGgE80yDkYI/AAAAAAAAEEk/1sdGjziDJ9gN9JuBc3IwKBsXB-NNFnIvwCLcBGAs/s1600/preuoro_atilde_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="235" data-original-width="1215" height="61" src="https://3.bp.blogspot.com/-lpjM0-osI5E/XGgE80yDkYI/AAAAAAAAEEk/1sdGjziDJ9gN9JuBc3IwKBsXB-NNFnIvwCLcBGAs/s320/preuoro_atilde_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Accumulation of activations</td></tr>
-</tbody></table>
+<div class="captioned_image">
+<img src="{{'/assets/images/uoro_2019-02-16/preuoro_double_graph.png'|relative_url}}">
+<p class="caption">Forward-propagation of preactivation-space noise into $\tilde{H}_t$, and accumulation of inputs into $\tilde{a}_t$</p>
+</div>
 
 We show in the paper that this property can be exploited to reduce the variance contribution $V (Q)$ by a factor equal to the dimension of the preactivations, at the cost of increasing the computational complexity by the same factor. Typically, this means going from $\mathcal{O} (H^2)$ time (vanilla UORO) to $\mathcal{O} (H^3)$ time (preactivation-space UORO); a serious increase but still better than RTRL's $\mathcal{O} (H^4)$ time ($H$ is the size of the hidden state $h_t$).
 
@@ -322,38 +315,51 @@ $$
 
 Here $u_t \sim \mathcal{N} (0, I)$ is additive Gaussian noise, and $\sigma$ determines the level of noise. The invertible matrix $Q_t$ transforms the standard normal noise $u_t$ and corresponds to a covariance matrix, but the reason it is included here is because it will end up playing the same role as the $Q_t$ matrix discussed in the variance reduction section above. Effectively, the stochastic hidden state $\bar{h}_t \sim \mathcal{N} (h_t, \sigma^2 Q_t Q_t^{\top})$ is sampled from a Gaussian distribution centered on the deterministic hidden state $h_t$. We assume the loss $L_t$ to be a differentiable function of $\bar{h}_t$.
 
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;"><a href="https://2.bp.blogspot.com/-QKZloPnHRY4/XGgHx-bvdrI/AAAAAAAAEE4/zMRHF0hx5GA2xQh_VEUHmEDENbsv51C3gCLcBGAs/s1600/noisy_graph.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="362" data-original-width="1600" height="72" src="https://2.bp.blogspot.com/-QKZloPnHRY4/XGgHx-bvdrI/AAAAAAAAEE4/zMRHF0hx5GA2xQh_VEUHmEDENbsv51C3gCLcBGAs/s320/noisy_graph.png" width="320" /></a></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">RNN with state perturbation</td></tr>
-</tbody></table>
+<div class="captioned_image">
+<img src="{{'/assets/images/uoro_2019-02-16/noisy_graph.png'|relative_url}}">
+<p class="caption">RNN with state perturbations</p>
+</div>
 
 To be clear, the sole purpose of injecting this noise is so that we may apply REINFORCE to estimate gradients through the system and compare these estimates to those of UORO. The stochastic transition distribution will be our policy from the REINFORCE perspective, which suggests actions $\bar{h}_t$ given states $h_t$. We compute the REINFORCE estimator by running the stochastic RNN forward, thus sampling a trajectory of states $\bar{h}_t$, and at each step computing
+
 $$
 L_t \nabla_{\theta} \log p (\bar{h}_t | \bar{h}_0, \bar{h}_1 \ldots
  \bar{h}_{t - 1} ; \theta) \approx \mathcal{J}^{L_t}_{\theta} .
 $$
+
 The estimate consists of the loss $L_t$ times the score function of the trajectory. Intuitively, higher rewards (equivalently, lower losses) "reinforce" directions in parameter space that bring them about.
 
-The score function $$\bar{w}_t^{\top} = \nabla_{\theta} \log p (\bar{h}_t | \bar{h}_0, \bar{h}_1 \ldots \bar{h}_{t - 1} ; \theta)$$ is maintained online according to
+The score function
+
+$$\bar{w}_t^{\top} = \nabla_{\theta} \log p (\bar{h}_t | \bar{h}_0, \bar{h}_1 \ldots \bar{h}_{t - 1} ; \theta)$$
+
+is maintained online according to
+
 $$
 \bar{w}_t^{\top} = \bar{w}_{t - 1}^{\top} + \nabla_{\theta} \log p
- (\bar{h}_t | \bar{h}_{t - 1} ; \theta_t) = \bar{w}_{t - 1} +
+ (\bar{h}_t | \bar{h}_{t - 1} ; \theta_t) = \bar{w}_{t - 1}^\top +
  \frac{1}{\sigma} u_t^{\top} Q_t^{- 1} \mathcal{J}^{h_t}_{\theta_t},
 $$
+
 which is analogous to $\tilde{w}$ in UORO. An important difference is that the backward Jacobians $$\mathcal{J}^{h_t}_{\theta_t}$$ are evaluated in the noisy system. In the paper we eliminate this difference by passing to the limit $\sigma \rightarrow 0$, which simulates the common practice of annealing the noise.
 
 Besides $\tilde{w}_t$, UORO's estimate of $$\mathcal{J}^{L_t}_{h_t} \tilde{h}_t \tilde{w}_t^{\top} \approx \mathcal{J}^{L_t}_{\theta}$$ involves $$\mathcal{J}^{L_t}_{h_t} \tilde{h}_t$$. In REINFORCE, the inner product of $\bar{w}_t$ with this quantity is implicit in the multiplication by the loss. We can reveal it by taking the Taylor series of the loss around the point $u = 0$ where the noise is zero:
+
 $$
 L_t = L_t |_{u = 0} + \left( \sum_{s \leqslant t} \mathcal{J}^{L_t}_{u_s}
  |_{u = 0} u_s \right) + \frac{1}{2} \left( \sum_{r \leqslant t} \sum_{s
  \leqslant t} u_r^{\top} \mathcal{H}^{L_t}_{u_r, u_s} |_{u = 0} u_s \right) + \cdots
 $$
+
 Using the fact that derivatives with respect to $u_s$ are directly related to derivatives with respect to $h_s$, namely
+
 $$
 \mathcal{J}^{L_t}_{u_s} |_{u = 0} = \sigma \sum_{s \leqslant t}
  \mathcal{J}^{L_t}_{h_s} |_{u = 0} Q_s,
 $$
+
 we may write
+
 $$
 L_t = L_t |_{u = 0} + \sigma \mathcal{J}^{L_t}_{h_t} \left( \sum_{s
  \leqslant t} \mathcal{J}^{h_t}_{h_s} |_{u = 0} Q_s u_s \right) +\mathcal{O}
