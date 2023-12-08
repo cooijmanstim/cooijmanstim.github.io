@@ -11,10 +11,8 @@ dramatically improving their training and generalization.
 I am currently working in the area of **multi-agent reinforcement learning** (MARL),
 which exaggerates some of the difficulties of single-agent (and supervised) learning, and introduces several new ones.
 In my view, the failure of gradient descent on MARL problems
-is fundamental, and
-our progress on single-agent learning has been due
-more to work-arounds than genuine understanding.
-MARL forces the issue.
+is fundamental, and its study will lead to
+new perspectives and opportunities on learning in general.
 In *Meta-Value Learning*, I propose an algorithm that
 generates a surrogate (the meta-value) on which gradient descent is stable,
 and, I suspect, finds global (Pareto) optima in principle.
