@@ -1,11 +1,20 @@
+- blurb: "ReaLchords: tailoring **generative** models for **jamming** with **RL fine-tuning** and **distillation**"
+  authors: Yusong Wu, Tim Cooijmans, Kyle Kastner, Adam Roberts, Ian Simon, Alexander Scarlatos, Chris Donahue, Cassie Tarakajian, Shayegan Omidshafiei, Aaron Courville, Pablo Samuel Castro, Natasha Jaques, Cheng-Zhi Anna Huang
+  venue: Submitted to ICML 2024.
+  image: realchords.png
+- blurb: "Learning with Opponent Q-Learning Awareness: solving **social dilemmas** by influencing opponent Q-values"
+  docurl: https://openreview.net/forum?id=FDQF6A1s6M
+  authors: Milad Aghajohari, Juan Augustin Duque, Tim Cooijmans, Aaron Courville
+  venue: ICLR 2024.
+  image: loqa.png
 - blurb: "Meta-Value Learning: solving **social dilemmas** with a novel general **meta-learning** framework."
   docurl: https://arxiv.org/abs/2307.08863
   authors: Tim Cooijmans, Milad Aghajohari, Aaron Courville
-  venue: ICML 2023 Frontiers workshop. Submitted to ICLR 2024.
+  venue: ICML 2023 Frontiers workshop. Submitted to TMLR.
   image: meva.png
 - blurb: "Best-Response Shaping: solving **social dilemmas** by **differentiating** through the **best response**."
   authors: Milad Aghajohari, Tim Cooijmans, Juan Augustin Duque, Shunichi Akatsuka, Aaron Courville
-  venue: Submitted to ICLR 2024.
+  venue: Submitted to TMLR.
   image: brs.png
 - blurb: "SUNMASK: Mask-Enhanced Control in Step-Unrolled **Denoising Autoencoders**."
   docurl: https://link.springer.com/chapter/10.1007/978-3-031-29956-8_10
@@ -37,7 +46,7 @@
   authors: Tegan Maharaj, David Krueger, Tim Cooijmans
   venue: ICML 2017 PADL workshop.
   image: rnnmemo.png
-- blurb: "Counterpoint by Convolution: a **convolutional** model of Bach's chorales and **Gibbs sampling** strategy."
+- blurb: "Counterpoint by Convolution: a **convolutional** model of Bach's chorales with **Gibbs sampling** strategy."
   docurl: https://arxiv.org/abs/1903.07227
   authors: Anna Huang, Tim Cooijmans, Adam Roberts, Aaron Courville, Douglas Eck
   venue: ISMIR 2017.
