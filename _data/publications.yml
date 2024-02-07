@@ -23,7 +23,7 @@
   image: sunmask.png
 - blurb: "MIDI-DDSP: detailed **control** of **musical performance** via **hierarchical modeling**."
   docurl: https://arxiv.org/abs/2112.09312
-  authors: Yuson Wu, Ethan Manilow, Yi Deng, Rigel Swavely, Kyle Kastner, Tim Cooijmans, Aaron Courville, Anna Huang, Jesse Engel
+  authors: Yuson Wu, Ethan Manilow, Yi Deng, Rigel Swavely, Kyle Kastner, Tim Cooijmans, Aaron Courville, Cheng-Zhi Anna Huang, Jesse Engel
   venue: ICLR 2022.
   image: mididdsp2.png
 - blurb: "On the Variance of UORO: an analysis of **variance (reduction)** for approx **forward-mode autodiff**."
@@ -38,7 +38,7 @@
   image: harmonicrecomposition.png
 - blurb: "Coconet: the ML model behind today's Bach Doodle."
   docurl: https://magenta.tensorflow.org/coconet
-  authors: Anna Huang, Tim Cooijmans, Monica Dinculescu, Adam Roberts, Curtis Hawthorne
+  authors: Cheng-Zhi Anna Huang, Tim Cooijmans, Monica Dinculescu, Adam Roberts, Curtis Hawthorne
   venue: Blog post, 2018.
   image: doodle.jpg
 - blurb: "Memorization in **Recurrent Neural Networks**."
@@ -48,7 +48,7 @@
   image: rnnmemo.png
 - blurb: "Counterpoint by Convolution: a **convolutional** model of Bach's chorales with **Gibbs sampling** strategy."
   docurl: https://arxiv.org/abs/1903.07227
-  authors: Anna Huang, Tim Cooijmans, Adam Roberts, Aaron Courville, Douglas Eck
+  authors: Cheng-Zhi Anna Huang, Tim Cooijmans, Adam Roberts, Aaron Courville, Douglas Eck
   venue: ISMIR 2017.
   image: coconet.png
 - blurb: "Waybackprop: unlocking **long-term dependencies** with **BPTT** using only **logarithmic space**."
