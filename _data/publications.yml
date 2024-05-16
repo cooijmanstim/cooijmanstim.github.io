@@ -1,6 +1,6 @@
 - blurb: "ReaLchords: tailoring **generative** models for **jamming** with **RL fine-tuning** and **distillation**"
   authors: Yusong Wu, Tim Cooijmans, Kyle Kastner, Adam Roberts, Ian Simon, Alexander Scarlatos, Chris Donahue, Cassie Tarakajian, Shayegan Omidshafiei, Aaron Courville, Pablo Samuel Castro, Natasha Jaques, Cheng-Zhi Anna Huang
-  venue: Submitted to ICML 2024.
+  venue: ICML 2024.
   image: realchords.png
 - blurb: "Learning with Opponent Q-Learning Awareness: solving **social dilemmas** by influencing opponent Q-values"
   docurl: https://openreview.net/forum?id=FDQF6A1s6M
@@ -10,11 +10,11 @@
 - blurb: "Meta-Value Learning: solving **social dilemmas** with a novel general **meta-learning** framework."
   docurl: https://arxiv.org/abs/2307.08863
   authors: Tim Cooijmans, Milad Aghajohari, Aaron Courville
-  venue: ICML 2023 Frontiers workshop. Submitted to TMLR.
+  venue: ICML 2023 Frontiers workshop.
   image: meva.png
 - blurb: "Best-Response Shaping: solving **social dilemmas** by **differentiating** through the **best response**."
   authors: Milad Aghajohari, Tim Cooijmans, Juan Augustin Duque, Shunichi Akatsuka, Aaron Courville
-  venue: Submitted to TMLR.
+  venue: RLC 2024.
   image: brs.png
 - blurb: "SUNMASK: Mask-Enhanced Control in Step-Unrolled **Denoising Autoencoders**."
   docurl: https://link.springer.com/chapter/10.1007/978-3-031-29956-8_10
