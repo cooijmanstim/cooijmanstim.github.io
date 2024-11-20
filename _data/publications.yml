@@ -1,7 +1,18 @@
+- blurb: "Advantage Alignment Algorithms: simple, cheap, effective **opponent shaping**"
+  authors: Juan Agustin Duque, Milad Aghajohari, Tim Cooijmans, Razvan Ciuca, Tianyu Zhang, Gauthier Gidel, Aaron Courville
+  venue: Submitted to ICLR 2025.
+  image: adalign.png
+  docurl: https://arxiv.org/abs/2406.14662
+- blurb: "Coordination in **Generative Modeling**, **Automatic Differentiation** and **Multi-Agent** Learning"
+  authors: Tim Cooijmans
+  venue: PhD dissertation, 2024.
+  image: thesis.png
+  docurl: https://papyrus.bib.umontreal.ca/xmlui/handle/1866/33753
 - blurb: "ReaLchords: tailoring **generative** models for **jamming** with **RL fine-tuning** and **distillation**"
   authors: Yusong Wu, Tim Cooijmans, Kyle Kastner, Adam Roberts, Ian Simon, Alexander Scarlatos, Chris Donahue, Cassie Tarakajian, Shayegan Omidshafiei, Aaron Courville, Pablo Samuel Castro, Natasha Jaques, Cheng-Zhi Anna Huang
   venue: ICML 2024.
   image: realchords.png
+  docurl: https://openreview.net/forum?id=mUVydzrkgz
 - blurb: "Learning with Opponent Q-Learning Awareness: solving **social dilemmas** by influencing opponent Q-values"
   docurl: https://openreview.net/forum?id=FDQF6A1s6M
   authors: Milad Aghajohari, Juan Augustin Duque, Tim Cooijmans, Aaron Courville
